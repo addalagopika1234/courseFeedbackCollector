@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Collector System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, #1f1c2c, #928dab);
+      z-index: -1;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-link {
+      color: #f0f0f0 !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+
+    .main-section {
+      display: flex;
+      flex-wrap: wrap;
+      height: calc(100vh - 56px);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 1;
+      position: relative;
+    }
+
+    .text-content {
+      flex: 1 1 400px;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .text-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffd700;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .text-content h2 {
+      font-size: 1.6rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: #ffffffd1;
+    }
+
+    .text-content p {
+      font-size: 1.2rem;
+      color: #ffffffcc;
+    }
+
+    .image-content {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .image-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .text-content h1 {
+        font-size: 2.2rem;
+      }
+      .text-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 3D Animation Background -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark px-4 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Feedback Collector</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <div class="main-section">
+    <div class="text-content">
+      <h1>Welcome to Feedback Collector</h1>
+      <h2>Gathering Better Feedback for Learning</h2>
+      <p>
+        Collect feedback from students to enhance course quality. Help educators and institutions grow by providing insights directly from learners.
+      </p>
+    </div>
+    <div class="image-content">
+      <img src="d1.jpg" alt="Feedback Illustration">
+    </div>
+  </div>
+
+  <!-- Particles.js Background Script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 70, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 4,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 1 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
